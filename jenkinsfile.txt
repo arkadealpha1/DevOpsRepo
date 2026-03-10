@@ -4,7 +4,7 @@ pipeline{
     stage('checkout'){
       steps{
         echo 'Checking out Repo'
-        git 'https://github.com/pkirad22/html-jenkins.git'
+        git branch : 'main', url : 'https://github.com/arkadealpha1/DevOpsRepo.git'
       }
     }
     stage('Publish'){
@@ -14,10 +14,11 @@ pipeline{
           alwaysLinktoLastBuild:false,
           KeepAll:false,
           reportDir:'.',
-          reportFiles:'html-jenkins.html',
+          reportFiles:'firstfirst.html',
           reportName:'MY HTML PIPE PAGE'
           ])
       }
     }
   }
+
 }
